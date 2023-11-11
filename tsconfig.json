@@ -2,6 +2,28 @@
   "extends": "@tsconfig/recommended/tsconfig.json",
   "include": ["src", "types"],
   "compilerOptions": {
-    "module": "esnext",
+    "target": "ES2020",
+    "module": "ES2020",
+    "lib": [
+      "ES2020",
+      "dom"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    // Code quality checks
+    //    "noUnusedParameters": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   }
 }
