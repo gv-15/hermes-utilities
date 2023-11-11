@@ -13,7 +13,7 @@
   "scripts": {
     "analyze": "size-limit --why",
     "build": "dts build",
-    "lint": "dts lint",
+    "lint": "dts lint 'src/**/*.ts'",
     "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
@@ -42,7 +42,7 @@
     "clearMocks": true,
     "logHeapUsage": true,
     "collectCoverage": true,
-    "coveragePathIgnorePatterns": [],
+    "coveragePathIgnorePatterns": ["src/index.ts"],
     "coverageThreshold": {
       "global": {
         "statements": 50,

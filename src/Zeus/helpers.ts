@@ -27,7 +27,7 @@ export function getDelta<Type extends Record<string, any>, Type2 extends Type>(
 
       case '[object Array]':
         // if 2 arrays have different length -> add whole array to result
-        if (newValue[key].length != oldValue[key].length) {
+        if (newValue[key].length !== oldValue[key].length) {
           result[key] = newValue[key];
         }
 
@@ -67,7 +67,7 @@ export function getDelta<Type extends Record<string, any>, Type2 extends Type>(
 
       // if field type is primitive
       default:
-        if (newValue[key] != oldValue[key]) {
+        if (newValue[key] !== oldValue[key]) {
           result[key] = newValue[key];
         }
     }
